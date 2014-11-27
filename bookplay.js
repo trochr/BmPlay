@@ -4,7 +4,9 @@
 function player() {
   this.show = function() {
     if (document.getElementById('bmplayer') !== null) {
+      var audio = document.getElementById('bmaudio');
       var pl = document.getElementById('bmplayer');
+      audio.playlist[Math.floor(pl.getAttribute('currenttrack'))].style.background = "none"
       return pl.parentElement.removeChild(pl);
     }
     this.p = document.createElement('div');
